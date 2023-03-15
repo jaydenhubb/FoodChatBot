@@ -40,7 +40,7 @@ io.on("connection", (socket) => {
   const check = async()=>{
     if(customer.cart === null){
         await autoResponse(
-            `Input <b>1</b> to view list of options`)
+            `Input <b>1</b> to view list of available menu.`)
     }
   }
 
@@ -54,9 +54,9 @@ io.on("connection", (socket) => {
  
     try {
       if (!customer.name) {
-        customer.name = msg;
+        customer.name = msg.toUpperCase();
         await autoResponse(
-          `welcome to Chop-Grow, <i>${customer.name}</i>: <br>Press <b>1</b> to view list of available menu.`
+          `welcome to Jay Food, <i>${customer.name}!</i> <br>Press <b>1</b> to view list of available menu.`
         );
       } else {
         switch (msg) {
