@@ -193,7 +193,7 @@ io.on("connection", (socket) => {
             check()
             if (customer.cart.length === 0) {
               await autoResponse(
-                "No current order. Please input <b>1</b> to start placing orders.<br>Input <b>1</b> to view menu and place more orders.<br>Input <b>99</b> to checkout order list."
+                "No current order.<br>Input <b>1</b> to view menu and place more orders.<br>Input <b>99</b> to checkout order list."
               );
             }  
             else {
