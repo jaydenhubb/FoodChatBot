@@ -32,7 +32,7 @@ io.on("connection", (socket) => {
   console.log("new customer in", socket.id);
   let customer = {
     name: "",
-    cart: null,
+    cart: [],
   };
   const check = async () => {
     if (customer.cart === null) {
@@ -64,7 +64,7 @@ io.on("connection", (socket) => {
             const itemOptions = fastfoods
               .map((food) => `<b>${food.name}</b> => <b>${food.tag}</b><br>`)
               .join("\n");
-            customer.cart = [];
+            // customer.cart = [];
             await autoResponse(
               `Available products and their respective tags:<br>${itemOptions}Please select a product by inputing its corresponding tag.`
             );
