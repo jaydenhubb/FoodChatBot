@@ -208,7 +208,7 @@ io.on("connection", (socket) => {
                 .join("\n");
 
               await autoResponse(
-                `Here is your current order:<br>${currentOrder} <b>Total cost:${price}</b><br>Input <b>0</b> to cancel orders.<br>Input <b>1</b> to view menu and place more orders.`
+                `Here is your current order:<br>${currentOrder} <b>Total cost:${price}</b><br>Input <b>0</b> to cancel orders.<br>Input <b>1</b> to view menu and place more orders.<br>Input <b>99</b> to checkout order list.`
               );
             }
             break;
